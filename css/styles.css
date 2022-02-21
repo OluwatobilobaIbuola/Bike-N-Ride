@@ -1,0 +1,50 @@
+:root{
+    --clr-primary: #fff;
+    --clr-accent: #4F0E0E;
+
+    --ff-primary: "Roboto" san-serif;
+    --ff-dark: #252525;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.1;
+
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+
+h1{
+    font-size: 4.2em;
+    font-weight: 900;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.container{
+    padding: 1em;
+    margin-inline: auto;
+    width: min(93%, 66em)
+}
+
+.split{
+    display: flex;
+
+   
+}
+
+.split-item{
+    flex-basis: 100%;
+}
