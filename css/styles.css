@@ -1,6 +1,7 @@
 :root{
     --clr-primary: #fff;
     --clr-accent: #4F0E0E;
+    --bg-color: rgb ()
 
     --ff-primary: "Roboto" san-serif;
     --ff-dark: #252525;
@@ -22,11 +23,114 @@ p{
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+p{
+    margin-bottom: 0.48em;
+}
+
+
 h1{
-    font-size: 4.2em;
+    font-size: 4.2rem;
     font-weight: 900;
 }
 
+/* nav */
+
+header{
+    text-align: center;
+    background: var(--clr-primary);
+    position: relative;
+    z-index:999;
+    padding: 1em;
+    margin-inline: auto;
+    width: min(93%, 66em)
+
+}
+
+nav {
+    position:absolute;
+    text-align:left;
+    top:100%;
+    left:0;
+    background:var(--clr-primary);
+    width:100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: var(--ff-dark);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+    color: var(--clr-accent);
+}
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--ff-dark);
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content:'';
+    position:absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 28px;
+}
+
+.nav-toggle-label span::after{
+    top: 28px;
+}
 
 img{
     display: block;
@@ -41,10 +145,55 @@ img{
 
 .split{
     display: flex;
-
-   
+    flex-direction: column; 
 }
 
 .split-item{
     flex-basis: 100%;
+    margin-bottom: 3em;
+}
+
+footer{
+    text-align: center;   
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-toggle-label{
+        display: none;
+    }
+    .split {
+        flex-direction: row;
+    }
+    header{
+        display: grid;
+        grid-template-columns: auto minmax(600px, 1fr) 1fr 1fr;
+    }
+    .logo {
+        grid-column: 1 / 2;
+    }
+    .search{
+        grid-column: 4 / 5;
+        border-radius: 5px;
+    }
+    nav{
+        grid-column: 2 / 3;
+        all: unset;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav li{
+        margin-left: 2em;
+        margin-bottom: 0;
+    }
+    nav a{
+        opacity: 1;
+    }
+
 }
