@@ -132,6 +132,10 @@ nav a:hover{
     top: 28px;
 }
 
+.search{
+    border-radius: 20px;
+}
+
 img{
     display: block;
     max-width: 100%;
@@ -173,7 +177,6 @@ footer{
     }
     .search{
         grid-column: 4 / 5;
-        border-radius: 5px;
     }
     nav{
         grid-column: 2 / 3;
@@ -196,4 +199,18 @@ footer{
         opacity: 1;
     }
 
+}
+@media screen and (max-width: 1024px){
+    .search{
+        display: inline;
+        position: absolute;
+        right: 0;
+        max-width: 4em;
+    }
+    .logo{
+        display: inline;
+
+    }
+    
+    
 }
