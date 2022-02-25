@@ -1,10 +1,11 @@
 :root{
     --clr-primary: #fff;
-    --clr-accent: #4F0E0E;
-    --bg-color: rgb ()
+    --clr-accent: #8E0505;
+    --clr-blg:#2C3333;
 
     --ff-primary: "Roboto" san-serif;
-    --ff-dark: #252525;
+    --ff-dark: #2C3333;
+    --ff-clr-primary:#fff;
 }
 
 body{
@@ -12,6 +13,7 @@ body{
     font-weight: 400;
     font-size: 1.2em;
     line-height: 1.1;
+    color:var(--ff-dark)
 
 }
 
@@ -45,8 +47,11 @@ header{
     z-index:999;
     padding: 1em;
     margin-inline: auto;
-    width: min(93%, 66em)
+    width: min(93%, 66em);
+}
 
+.logo{
+    color:var(--clr-accent);
 }
 
 nav {
@@ -133,7 +138,24 @@ nav a:hover{
 }
 
 .search{
-    border-radius: 20px;
+    border-radius: 10px;
+    width: min(70%, 8rem);
+}
+
+.bike-button{
+    margin: 1rem 0.5rem 0;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+}
+
+.bike-blg{
+    background-color: var(--clr-blg);
+    color: var(--ff-clr-primary);
+}
+
+.bike-accent{
+    background-color: var(--clr-accent);
+    color: var(--ff-clr-primary);
 }
 
 img{
@@ -144,7 +166,7 @@ img{
 .container{
     padding: 1em;
     margin-inline: auto;
-    width: min(93%, 66em)
+    width: min(93%, 66em);
 }
 
 .split{
@@ -157,8 +179,14 @@ img{
     margin-bottom: 3em;
 }
 
+.split-item span{
+    color:var(--clr-accent);
+}
+
 footer{
-    text-align: center;   
+    text-align: center;
+    background-color: var(--clr-blg);  
+    color: var(--ff-clr-primary); 
 }
 
 @media screen and (min-width: 1024px) {
@@ -204,8 +232,8 @@ footer{
     .search{
         display: inline;
         position: absolute;
-        right: 0;
-        max-width: 4em;
+        right: 8px;
+        max-width: 6em;
     }
     .logo{
         display: inline;
