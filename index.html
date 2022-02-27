@@ -19,24 +19,27 @@
 <body>
     
         <header>
-                    <h2 class="logo">Ride N Bike</h2>
-                    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Main</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <label for="nav-toggle" class="nav-toggle-label">
-                        <span></span>
-                    </label>
-                    <input class="search" type="text">
+            <h2 class="logo"> Ride N Bike</h2>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <form class="search-form" action="">
+                <input type="search" id="ssearch" name="ssearch">
+                <input type="submit">
+            </form>
 
         </header>
 
-        <section>
+        <section id="title">
             <div class="container split">
                 <div class="split-item">
                     <p>Bike Service</p>
@@ -48,40 +51,50 @@
                     </div>
                 </div>
                 <div class="split-item">
-                    <img src="images/ride n bike.jpg" alt="">
+                    <img class="bike-title" src="images/ride n bike.jpg" alt="">
                 </div>
             </div>
         </section>
 
-        <footer>
+        <section id="features">
             <div class="container split">
-                <div class="split-item">
-                    <img src="" alt="">
-                    <h3> Engine Power</h3>
-                    <p>1300cm per seconds</p>
+                <div class="split-item icon-text-display">
+                    <img class="icon" src="images/high-voltage.png" alt="">
+                    <div class="feature-text">
+                        <h3> Engine Power</h3>
+                        <p>1300cm per seconds</p>
+                    </div>
                 </div>
                 <div class="split-item">
-                    <img src="" alt="">
-                    <h3>Max Power</h3>
-                    <p>1325cm per seco
+                    <img class="icon" src="images/speedometer.png" alt="">
+                    <div class="feature-text">
+                        <h3>Max Power</h3>
+                        <p>1325cm per seco</p>
+                    </div>
                 </div>
                 <div class="split-item">
-                    <img src="" alt="">
-                    <h3>RPM Guage</h3>
-                    <p>1300cm per seconds</p>
+                    <img class="icon" src="images/speedometer.png" alt="">
+                    <div class="feature-text">
+                        <h3>RPM Guage</h3>
+                        <p>1300cm per seconds</p>
+                    </div>
                 </div>
                 <div class="split-item">
-                    <img src="" alt="">
-                    <h3>Riding Range</h3>
-                    <p>1300cm per seconds</p>
+                    <img class="icon" src="images/bike.png" alt="">
+                    <div class="feature-text">
+                        <h3>Riding Range</h3>
+                        <p>1300cm per seconds</p>
+                    </div>
                 </div>
                 <div class="split-item">
-                    <img src="" alt="">
-                    <h3>Bike rating</h3>
-                    <p>✔ ✔ ✔ ✔</p>
+                    <img class="icon" src="images/star.png" alt="">
+                    <div class="feature-text">
+                        <h3>Bike rating</h3>
+                        <p>✔ ✔ ✔ ✔</p>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
     
 </body>
