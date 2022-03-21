@@ -231,8 +231,8 @@ nav a:hover{
 }
 
 #footer .icon{
-    width:1.5rem;
-    margin:0 1em;
+    width:0.9rem;
+    margin:0 0.5em;
 }
 
 #contact.container{
@@ -255,7 +255,7 @@ hr{
         padding:2em 1em 1em;
         margin-inline: auto;
         width: min(100%, 100%);
-        margin-top: 0;
+        margin: 0 0 3em;
     }
     .search-input{
         background-color: var(--clr-primary);
@@ -283,7 +283,6 @@ hr{
     }
     .search-form{
         grid-column: 3 / 4;
-        justify-content: center;
     }
     nav{
         grid-column: 2 / 3;
@@ -316,6 +315,10 @@ hr{
         align-items: center;
         height: 100%;
         position: static;
+    }
+    #footer .icon{
+        width:1.5rem;
+        margin:0 1em;
     }
 
 }
