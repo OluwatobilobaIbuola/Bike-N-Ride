@@ -6,5 +6,8 @@ for (let i=0; i<2; i++){
     buttonEl.addEventListener("mouseout", function (){      
     this.classList.remove("box-shadow");
 });
+    buttonEl.onclick = function(){
+        document.querySelector(".bike-image");
+    }
 }
 
