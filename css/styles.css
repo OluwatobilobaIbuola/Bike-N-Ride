@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 :root{
     --clr-primary: #fff;
     --clr-accent: #8E0505;
@@ -173,7 +176,17 @@ nav a:hover{
 .bike-button{
     margin: 1rem 0.5rem 0;
     border-radius: 10px;
-    padding: 0.5rem 2rem;
+    padding: 0.5em 2em;
+    font-weight: bold;
+    font-size: 1rem;
+    border:none;
+}
+
+.box-shadow{
+    box-shadow:2px 4px 2px 4px  #f5ebeb;
+}
+.bike-button:hover{
+    transform: scale(1.1);
 }
 
 .bike-blg{
@@ -186,9 +199,12 @@ nav a:hover{
     color: var(--ff-clr-primary);
 }
 
-.bike-title{
+.bike-image{
     display:block;
     max-width: 100%;
+}
+.bike-image:hover{
+    transform: scale(1.2);
 }
 
 #title .container{
@@ -197,7 +213,7 @@ nav a:hover{
 .container{
     padding: 8em 1em;
     margin-inline: auto;
-    width: min(93%, 75em);
+    width: min(80%, 75em);
 }
 
 .split{
@@ -259,6 +275,7 @@ hr{
     }
     .search-input{
         background-color: var(--clr-primary);
+        
     }
     #title .container{
         padding-top:8em;
