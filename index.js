@@ -1,13 +1,10 @@
-for (let i=0; i<2; i++){
-    let buttonEl = document.querySelectorAll("button")[i];
-    buttonEl.addEventListener("mouseover", function (){      
-    this.classList.add("box-shadow");
-});
-    buttonEl.addEventListener("mouseout", function (){      
-    this.classList.remove("box-shadow");
-});
-    buttonEl.onclick = function(){
-        document.querySelector(".bike-image");
-    }
+function boxShadow(x){      
+    x.classList.add("box-shadow");
 }
-
+function boxShadowOff(x){      
+    x.classList.remove("box-shadow");
+}
+function classToggle() {
+    document.querySelector(".navbar-item").classList.toggle("navbar-toggleshow")
+  }
+  

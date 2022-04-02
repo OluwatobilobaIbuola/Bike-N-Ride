@@ -12,45 +12,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
-
-    <script src="https://kit.fontawesome.com/6d9ca770f9.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/1589d225d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
         <header>
-            <a href="index.html" class="logo">RiderBank</a>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Main</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
-            <form class="search-form" action="">
-                <!-- <img class="search-image" src="images/magnifying-glass.png" alt=""> -->
-                <input placeholder="search" type="search" class="search-input" id="ssearch" name="ssearch">
-            </form>
-
+            <div class="navbar container">
+                <div class="navbar-link navbar-logo">
+                    <a href="index.html">RiderBank</a>
+                </div>
+                <div onclick="classToggle()" class="navbar-link navbar-link-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav class="navbar-item">
+                    <ul>
+                        <li class="navbar-link"><a href="index.html">Main</a></li>
+                        <li class="navbar-link"><a href="#">Service</a></li>
+                        <li class="navbar-link"><a href="#">About</a></li>
+                        <li class="navbar-link"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <img class="search-icon" src="images/magnifying-glass.png" alt="">
+                    <input type="search" aria-label="search" placeholder="search" class="search-bar-input">
+                </div>
+                
+            </div>
+            <hr>
         </header>
-
+        
         <section id="title">
-            <div class="container split">
+            <div class="top container split">
                 <div class="split-item">
                     <h1>Lore mj doty <br> sitm amet co adipi.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
                     <div>
-                        <button class="bike-button">Ride Bike</button>
-                        <button class="bike-button">Sell Bike</button>
+                        <button onmouseover="boxShadow(this)" onmouseout="boxShadowOff(this)" class="bike-button">Ride Bike</button>
+                        <button onmouseover="boxShadow(this)" onmouseout="boxShadowOff(this)" class="bike-button">Sell Bike</button>
                     </div>
                 </div>
-                <div class="split-item">
-                    <img class="bike-image" src="images/ride n bike.jpg" alt="">
+                <div class="bike-image-container split-item">
+                    <img class="bike-image" src="images/bike_1.png" alt="">
                 </div>
             </div>
         </section>
@@ -104,5 +106,6 @@
         </footer>
 
   <script src="index.js"></script>  
+ 
 </body>
 </html>
