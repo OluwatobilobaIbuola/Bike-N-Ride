@@ -47,6 +47,7 @@ h1{
 hr{
     display:none;
 }
+
 /* nav */
 header .navbar{
     display: flex;
@@ -114,7 +115,8 @@ header{
     width: min(80%, 80em);
 }
 
-.bike-button{
+/* bike button */
+.button{
     margin: 1em 1em 0 0;
     border-radius: 6px;
     padding: 0.8em 2em;
@@ -127,6 +129,13 @@ header{
     font-family: var(--ff-primary);
     transition: 1s;
 }
+
+.button:hover{
+    transform: scale(1.08);
+    opacity: 0.75;
+}
+
+/* title section */
 #title{
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1));
     background-size: 300%;
@@ -150,13 +159,14 @@ header{
 #title .container{
     padding:4em 0;
 }
-.box-shadow{
+
+/* .box-shadow{
     box-shadow:2px 1px 2px 2px  #b6bfca;
-}
-.bike-button:hover{
-    transform: scale(1.08);
-    opacity: 0.75;
-}
+} */
+
+
+
+/* title bike image */
 .bike-image-container{
     display: flex;
     justify-content: right;
@@ -169,6 +179,7 @@ header{
     transform: scale(1.2) rotateY(360deg)    
 }
 
+/* split effect*/
 .split{
     display: flex;
     flex-direction: column; 
@@ -183,6 +194,7 @@ header{
     color:var(--clr-accent);
 }
 
+/* features */
 #features{
     font-family: var(--ff-primary);
     text-align: center;
@@ -202,6 +214,7 @@ header{
     margin-bottom: 1.2em;
 }
 
+/* footer */
 #footer{
     background-color: #F7F7F7;
     text-align: center;
@@ -216,14 +229,34 @@ header{
 #footer .container{
     padding:4em 0;
 }
-#contact{
-    width:100vw;
-    color: var(--ff-clr-primary); 
-    background: #000000;
-}
-#contact .container{ 
+
+/* contact page section */
+
+#contact-us .container{ 
     margin-bottom: 2em;
     padding:4em 0;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction: column;
+}
+
+.form-item{
+    max-width: 50%;
+    margin-bottom: 0.5em;
+    border-radius: 8px;
+    border: none;
+    outline: 0;
+    
+}
+
+.form-item.button{
+    max-width:12.5%;
+}
+
+.form-item.pad{
+    padding:1em;
 }
 
 @media screen and (min-width: 1024px) {
