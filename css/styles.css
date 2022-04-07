@@ -265,6 +265,7 @@ header{
         position:fixed;
         width:100vw;   
         outline:0;
+        z-index: 999;
     }
 
 
