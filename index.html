@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    
     <script src="https://kit.fontawesome.com/1589d225d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
@@ -20,8 +21,9 @@
                 <div class="navbar-link navbar-logo">
                     <a href="index.html">RiderBank</a>
                 </div>
-                <div onclick="classToggle()" class="navbar-link navbar-link-toggle">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="navbar-link navbar-link-toggle">
+                    <i class="fa-solid bar fa-bars appear"></i>
+                    <i class="fa-solid bar fa-bars-staggered"></i>
                 </div>
                 <nav class="navbar-item">
                     <ul>
@@ -37,7 +39,6 @@
                 </div>
                 
             </div>
-            <!-- <hr> -->
         </header>
         
         <section id="title">
@@ -47,53 +48,70 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
                     <div>
                         <button class="button">Ride Bike</button>
-                        <button class="button">Sell Bike</button>
+                        <button class="button button-right">Sell Bike</button>
                     </div>
                 </div>
-                <div class="bike-image-container split-item">
-                    <img class="bike-image" src="images/bike_1.png" alt="">
+                <div class="split-item">
+                    <img class="bike-image split-item" src="images/bike_1.png" alt="">
                 </div>
             </div>
         </section>
 
         <section id="features">
             <div class="container split">
-                <div class="split-item icon-text-display">
-                    <img class="icon" src="images/voltage.png" alt="">
-                    <div class="feature-text">
-                        <h3> Engine Power</h3>
-                        <p>1300cm per seconds</p>
-                    </div>
-                </div>
-                <div class="split-item">
-                    <img class="icon" src="images/speedometer (2).png" alt="">
-                    <div class="feature-text">
-                        <h3>Max Power</h3>
-                        <p>1325cm per seco</p>
-                    </div>
-                </div>
-                <div class="split-item">
-                    <img class="icon" src="images/speedometer.png" alt="">
-                    <div class="feature-text">
-                        <h3>RPM Guage</h3>
-                        <p>1300cm per seconds</p>
-                    </div>
-                </div>
-                <div class="split-item">
-                    <img class="icon" src="images/bicycle.png" alt="">
-                    <div class="feature-text">
-                        <h3>Riding Range</h3>
-                        <p>1300cm per seconds</p>
-                    </div>
-                </div>
-                <div class="split-item">
-                    <img class="icon" src="images/star.png" alt="">
-                    <div class="feature-text">
-                        <h3>Bike rating</h3>
-                        <p>⭐⭐⭐⭐⭐</p>
-                    </div>
-                </div>
+                <main class="split-item slide-in slide-in-left">
+        
+                        <h1>Services</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, tenetur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>    
+    
+                </main>
+                <aside class="carousel split-item slide-in slide-in-right">
+                        <button class="carousel-btn carousel-btn-left is-hidden">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide sidebar-text active">
+                                    <img class="icon" src="images/voltage.png" alt="">
+                                    <h3> Engine Power</h3>
+                                    <p>1300cm per seconds</p>
+                                </li>
+                                <li class="carousel-slide sidebar-text">
+                                    <img class="icon" src="images/speedometer.png" alt="">
+                                    <h3>Max Power</h3>
+                                    <p>1325cm per seco</p>
+                                </li>
+                                <li class="carousel-slide sidebar-text">
+                                    <img class="icon" src="images/speedometer (2).png" alt="">
+                                    <h3>RPM Guage</h3>
+                                    <p>1300cm per seconds</p>
+                                </li>
+                                <li class="carousel-slide sidebar-text">
+                                    <img class="icon" src="images/bicycle.png" alt="">
+                                    <h3>Riding Range</h3>
+                                    <p>1300cm per seconds</p>
+                                </li>
+                                <li class="carousel-slide sidebar-text">
+                                    <img class="icon" src="images/star.png" alt="">
+                                    <h3>Bike rating</h3>
+                                    <p>⭐⭐⭐⭐</p>
+                                </li>
+                            </ul>
+                            <button class="carousel-btn carousel-btn-right">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-indicator active"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                        </div>
+                </aside>
             </div>
+            
         </section>
         <footer id="footer">
             <div class="container">
