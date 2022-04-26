@@ -25,11 +25,16 @@ slides.forEach(setSlidePosition)
 //carousel slide event 
 
 const moveSlide = (tracks, activeSlide, targetSlide) => {
+  setInterval(() => {
+    
+  })
   const amountToMove = targetSlide.style.left;
   tracks.style.transform = `translateX(-${amountToMove})`;
+  tracks.style.transition = `2s ease-out`
   activeSlide.classList.remove("active");
   targetSlide.classList.add("active");
 }
+  
 
 const updateDot = (activeDot, targetDot) => {
   activeDot.classList.remove("active");
