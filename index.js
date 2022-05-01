@@ -15,12 +15,14 @@ const nextBtn = document.querySelector(".carousel-btn-right")
 const dotNav = document.querySelector(".carousel-nav")
 const dots = Array.from(dotNav.children)
 const slideWidth = slides[0].getBoundingClientRect().width
-// console.log("width", slideWidth)
 const setSlidePosition = (slide, index) => {
   slide.style.left = slideWidth * index + "px"; 
-  // console.log("slide-width", slide.style.left)
 }
 slides.forEach(setSlidePosition)
+
+//footer DOM
+const date = new Date().getFullYear();
+document.querySelector(".copyright").innerHTML = `&copy copyright ${date}`
 
 //carousel slide event 
 

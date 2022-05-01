@@ -4,15 +4,23 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "Modern Sans";
+    src: url("fonts/Moderne Sans Font.ttf") format("ttf");
+    font-weight: normal;
+}
+
 * {
     box-sizing: border-box;
 }
 :root{
-    --clr-primary: #fff;
+    --clr-primary: #212529;
+    /* #00182c */
     --clr-accent: #8E0505;
     --clr-blg:#2C3333;
 
     --ff-primary: "Audrey";
+    --ff-accent: "Modern Sans";
     --ff-dark: #2C3333;
     --ff-clr-primary:#fff;
 }
@@ -23,6 +31,7 @@ body{
     font-size: 16px;
     line-height: 1.1;
     color:var(--ff-clr-primary);
+    font-family: "Modern Sans";
 
 }
 
@@ -47,7 +56,7 @@ p{
 h1{
     font-size: 9vmin;
     font-weight:bold;
-    font-family: var(--ff-primary), sans-serif;
+    font-family: var(--ff-accent);
 }
 
 
@@ -63,7 +72,7 @@ header .navbar{
     display:none;
 }
 nav a{
-    color: #5b6e80;
+    color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -85,9 +94,10 @@ nav a{
 }
 .navbar-logo a{
     text-decoration: none;
-    color:#206A5D;
+    color:#fff;
     font-size:1.2rem;
     font-weight: 700;
+    font-family: "Modern Sans";
 }
 .search-bar{
     display:none;
@@ -96,7 +106,7 @@ nav a{
     align-self: flex-end;
     position: absolute;
     cursor: pointer;
-    color:#206A5D;
+    color:#fff;
     font-size: 1em;
 }
 .navbar-toggleshow {
@@ -372,7 +382,7 @@ main p{
 
 @media screen and (min-width: 1245px) {
     header{
-        background: #F7F7F7;
+        background: var(--clr-primary);
         position:fixed;
         width:100vw;   
         outline:0;
@@ -447,7 +457,7 @@ main p{
         
     }
     nav a{
-        color: #5b6e80;
+        color: #fff;
         text-decoration: none;
         font-size: 1.2rem;
         text-transform: uppercase;
