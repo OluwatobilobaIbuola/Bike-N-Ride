@@ -13,10 +13,10 @@
 </head>
 <body>
     
-        <header>
+        <header id="heading" class="head-el">
             <div class="navbar container">
                 <div class="navbar-link navbar-logo">
-                    <a href="index.html">RiderBank</a>
+                    <a class="anchor-link-logo" href="index.html">RiderBank</a>
                 </div>
                 <div class="navbar-link navbar-link-toggle">
                     <i class="fa-solid bar fa-bars appear"></i>
@@ -24,10 +24,10 @@
                 </div>
                 <nav class="navbar-item">
                     <ul>
-                        <li class="navbar-link"><a href="index.html">Main</a></li>
-                        <li class="navbar-link"><a href="#">Service</a></li>
-                        <li class="navbar-link"><a href="#">About</a></li>
-                        <li class="navbar-link"><a href="contact.html">Contact Us</a></li>
+                        <li class="navbar-link"><a class="anchor-link"href="index.html">Main</a></li>
+                        <li class="navbar-link"><a class="anchor-link"href="#">Service</a></li>
+                        <li class="navbar-link"><a class="anchor-link"href="#">About</a></li>
+                        <li class="navbar-link"><a class="anchor-link"href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="search-bar">
@@ -39,95 +39,150 @@
         </header>
         
         <section id="title">
-            <div class="container split">
-                <div class="split-item">
-                    <h1>Lore mj doty <br> sitm amet co adipi.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
-                    <div>
+            <div class="container">
+                <div>
+                    <div class="title-text-bg">
+                        <h1>Lore mj doty <br> sitm amet co adipi.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
+                    </div>
+                     <div>
                         <button class="button">Order Bike</button>
                         <button class="button button-right">Sign Up</button>
                     </div>
                 </div>
+                <div class="sidebar-icons-container">
+                    <div class="sidebar-icons">
+                        <a href=""><img class="icon" src="images/facebook (1).png" alt=""></a> 
+                    </div>
+                    <div class="sidebar-icons">
+                        <a href=""><img class="icon" src="images/instagram (1).png" alt=""></a> 
+                    </div>
+                    <div class="sidebar-icons">
+                        <a href=""><img class="icon" src="images/twitter.png" alt=""></a> 
+                    </div>
+                </div> 
             </div>
         </section>
 
-        <section id="features">
-            <div class="container split">
-                <main class="split-item slide-in slide-in-left">
+        <section id="intro">
+            <div class="container intro-cover">
+                <main class="intro-text fade-in">
         
-                        <h2>Services</h2>
+                        <h2>Welcome to the RiderBank official website.</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, tenetur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>    
     
                 </main>
-                <aside class="carousel split-item slide-in slide-in-right">
-                        <button class="carousel-btn carousel-btn-left is-hidden">
-                            <i class="fa-solid fa-angle-left"></i>
+            </div>   
+        </section>
+        <section id="features">
+                <div class="carousel slide-in">
+                    <button class="carousel-btn carousel-btn-left is-hidden">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide sidebar-text active">
+                                <img class="icon" src="images/voltage.png" alt="">
+                                <h3> Engine Power</h3>
+                                <p>1300cm per seconds</p>
+                            </li>
+                            <li class="carousel-slide sidebar-text">
+                                <img class="icon" src="images/speedometer.png" alt="">
+                                <h3>Max Power</h3>
+                                <p>1325cm per seco</p>
+                            </li>
+                            <li class="carousel-slide sidebar-text">
+                                <img class="icon" src="images/speedometer (2).png" alt="">
+                                <h3>RPM Guage</h3>
+                                <p>1300cm per seconds</p>
+                            </li>
+                            <li class="carousel-slide sidebar-text">
+                                <img class="icon" src="images/bicycle.png" alt="">
+                                <h3>Riding Range</h3>
+                                <p>1300cm per seconds</p>
+                            </li>
+                            <li class="carousel-slide sidebar-text">
+                                <img class="icon" src="images/star.png" alt="">
+                                <h3>Bike rating</h3>
+                                <p>⭐⭐⭐⭐</p>
+                            </li>
+                        </ul>
+                        <button class="carousel-btn carousel-btn-right">
+                            <i class="fa-solid fa-angle-right"></i>
                         </button>
-                        <div class="carousel-track-container">
-                            <ul class="carousel-track">
-                                <li class="carousel-slide sidebar-text active">
-                                    <img class="icon" src="images/voltage.png" alt="">
-                                    <h3> Engine Power</h3>
-                                    <p>1300cm per seconds</p>
-                                </li>
-                                <li class="carousel-slide sidebar-text">
-                                    <img class="icon" src="images/speedometer.png" alt="">
-                                    <h3>Max Power</h3>
-                                    <p>1325cm per seco</p>
-                                </li>
-                                <li class="carousel-slide sidebar-text">
-                                    <img class="icon" src="images/speedometer (2).png" alt="">
-                                    <h3>RPM Guage</h3>
-                                    <p>1300cm per seconds</p>
-                                </li>
-                                <li class="carousel-slide sidebar-text">
-                                    <img class="icon" src="images/bicycle.png" alt="">
-                                    <h3>Riding Range</h3>
-                                    <p>1300cm per seconds</p>
-                                </li>
-                                <li class="carousel-slide sidebar-text">
-                                    <img class="icon" src="images/star.png" alt="">
-                                    <h3>Bike rating</h3>
-                                    <p>⭐⭐⭐⭐</p>
-                                </li>
-                            </ul>
-                            <button class="carousel-btn carousel-btn-right">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </button>
-                        </div>
-                        <div class="carousel-nav">
-                            <button class="carousel-indicator active"></button>
-                            <button class="carousel-indicator"></button>
-                            <button class="carousel-indicator"></button>
-                            <button class="carousel-indicator"></button>
-                            <button class="carousel-indicator"></button>
-                        </div>
-                </aside>
-            </div>
-            
-        </section>
-        <section id="more-feature">
-            <div class="container">
-                <h2>Lorem, ipsum dolor.</h2>
-                <div class="more-feature-img-container">
-                    <img class="feature-img" src="images/Beachimage 1.jfif" alt="">
-                    <img class="feature-img" src="images/beachimage 2.jfif" alt=""> 
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator active"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
                 </div>
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            
         </section>
+        
         <footer id="footer">
             <div class="container">
-              <img class="icon" src="images/facebook (1).png" alt="">
-              <img class="icon" src="images/instagram (1).png" alt="">
-              <img class="icon" src="images/twitter.png" alt="">
-              <p class="copyright"></p>
+                <h2>Discover more</h2>
+                <hr>
+                <div class="split footer">
+                    <div class="split-item">
+                        <h3>News</h3>
+                        <ul >
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="split-item">
+                        <h3>Events</h3>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="split-item">
+                        <h3>All about bikes</h3>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="split-item">
+                        <h3>More topics</h3>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul> 
+                    </div>
+                    <div class="split-item">
+                        <h3>Lorem</h3>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Stay connected</h3>
+                    <hr>
+                    <p>Follow us and use the following social media platforms to get in contact with us and to share your passion for biking</p>
+                    <div class="footer-icon-container">
+                        <i class=" footer-icon fa-brands fa-facebook"></i>
+                        <i class="footer-icon fa-brands fa-instagram"></i>
+                        <i class=" footer-icon fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright"></p>
             </div>
         </footer>
 

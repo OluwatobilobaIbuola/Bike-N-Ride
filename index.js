@@ -1,11 +1,30 @@
-//features sectionobserver DOM
-const sliders = document.querySelectorAll(".slide-in")
-const sliderOptions = {}
+//title DOM
+const titleSection = document.querySelector("#title");
+let backgroundInterval;
+
+//footer DOM
+const footerDate = document.querySelector(".copyright");
+const date = new Date().getFullYear();
+footerDate.innerHTML = `&copy Copyright ${date}. All Right Reserve`;
+
+//features sectionobserver  DOM 
+const headerEl = document.querySelector("header")
+const footerEl = document.querySelector("#footer")
+const navEl = document.querySelectorAll(".anchor-link")
+const logoEl = document.querySelector(".anchor-link-logo")
+const footerOptions = {
+  threshold:0.40
+};
+
+//intro sectionobserver DOM
+const fader = document.querySelector(".fade-in");
+const faderOptions = {};
 
 //navbar DOM
-const barsEl = document.querySelectorAll(".bar")
-const navBarEl = document.querySelector(".navbar-item")
-const navbarLinkToggle = document.querySelector(".navbar-link-toggle")
+const barsEl = document.querySelectorAll(".bar");
+const navBarEl = document.querySelector(".navbar-item");
+const navbarLinkToggle = document.querySelector(".navbar-link-toggle");
+
 
 //carousel DOM
 const tracks = document.querySelector(".carousel-track")
@@ -20,9 +39,13 @@ const setSlidePosition = (slide, index) => {
 }
 slides.forEach(setSlidePosition)
 
-//footer DOM
-const date = new Date().getFullYear();
-document.querySelector(".copyright").innerHTML = `&copy copyright ${date}`
+
+backgroundInterval = setInterval (function () { 
+    const num = Math.floor((Math.random() * 3) + 1)
+    titleSection.style.backgroundImage = `url(css/bike${num}.jpg)`
+},5000)
+
+
 
 //carousel slide event 
 
@@ -94,20 +117,19 @@ dotNav.addEventListener("click", e => {
 
 
 //navbar toggle event 
+
 navbarLinkToggle.addEventListener("click", function (x){
   navBarEl.classList.toggle("navbar-toggleshow")
   barsEl.forEach(bar => {
-    bar.classList.add("appear");
+      bar.classList.add("appear");
   });
   if (x.target.classList.contains("bar")){
-    x.target.classList.remove("appear")
-  }
+        x.target.classList.remove("appear")
+      }
 })
 
-
-
-//features sectionobserver 
-const slideObserver = new IntersectionObserver(function(entries, slideObserver){
+//intro sectionobserver 
+const faderObserver = new IntersectionObserver(function(entries){
   entries.forEach(entry =>{
     if(!entry.isIntersecting){
       entry.target.classList.remove("appear")
@@ -115,12 +137,32 @@ const slideObserver = new IntersectionObserver(function(entries, slideObserver){
       entry.target.classList.add("appear")
     }
   })
-}, sliderOptions)
+}, faderOptions)
 
-sliders.forEach(slider => {
-    slideObserver.observe(slider)
-  }
-)
+faderObserver.observe(fader)
+
+//footer sectionobserver
+const headerObserver = new IntersectionObserver(function(entries){
+    entries.forEach(entry => {
+      if(!entry.isIntersecting){
+        headerEl.classList.remove("head-toggle");
+        navEl.forEach(anchor => {
+        anchor.classList.remove("nav-toggle")
+        })
+        logoEl.classList.remove("nav-toggle")
+      } else {   
+        headerEl.classList.add("head-toggle");
+        navEl.forEach(anchor => {
+        anchor.classList.add("nav-toggle")
+        })
+        logoEl.classList.add("nav-toggle")
+    } 
+    })
+    
+}, footerOptions)
+
+headerObserver.observe(footerEl)
+
 
 
   
