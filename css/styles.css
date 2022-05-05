@@ -224,7 +224,7 @@ main p{
     padding:4em 4em;
     border:2px solid #206A5D;
     border-radius: 16px;
-    transition: opacity 2s, transform 3s ease-in;
+    transition: opacity 2s, transform 2s;
     opacity: 0;
 }
 .intro-cover{
@@ -244,7 +244,6 @@ main p{
     background-color: #0b342d;
     height: 32em;
     text-align: center;
- 
 }
 
 #features p{
