@@ -14,8 +14,6 @@
     box-sizing: border-box;
 }
 :root{
-    --clr-primary:black;
-    /* #00182c */
     --clr-accent: #8E0505;
     --clr-blg:#5b6e80;
 
@@ -67,7 +65,7 @@ h3{
 
 /* nav */
 .head-el{
-    background-color: var(--clr-primary);
+    background-color: black;
 
 }
 header.head-toggle{
