@@ -41,7 +41,7 @@ slides.forEach(setSlidePosition)
 
 
 backgroundInterval = setInterval (function () { 
-    const num = Math.floor((Math.random() * 3) + 1)
+    const num = Math.floor((Math.random() * 4) + 1)
     titleSection.style.backgroundImage = `url(css/bike${num}.jpg)`
 },5000)
 

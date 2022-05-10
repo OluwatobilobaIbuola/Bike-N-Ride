@@ -121,6 +121,7 @@ a.nav-toggle{
     position: absolute;
     cursor: pointer;
     font-size: 1em;
+    color:#fff;
 }
 .navbar-toggleshow {
     display: flex;
@@ -174,7 +175,7 @@ a.nav-toggle{
 
 /* title section */
 #title{
-    background-image: url("bike1.jpg");
+    background-image: url("bike2.jpg");
     background-size: cover;
     margin-bottom: 2em;
     /* animation: title-animation 15s infinite alternate; */
@@ -219,19 +220,26 @@ main p{
     margin-bottom:2em;
 }
 
-.intro-text{
+.intro-text-container{
     transform: translateY(50%);
-    padding:4em 4em;
-    border:2px solid #206A5D;
+    padding:0 8em;
     border-radius: 16px;
     transition: opacity 2s, transform 2s;
     opacity: 0;
+}
+
+.intro-text-container h2{
+    color:black;
+    font-size: 2em;
+}
+.intro-text-container span{
+    color:#206A5D;
 }
 .intro-cover{
     overflow-y: hidden;
 }
 
-.intro-text.appear{
+.intro-text-container.appear{
     transform: translateY(0);
     opacity: 1;
 }
@@ -290,7 +298,6 @@ main p{
     width: 100%;
     position:absolute;
     bottom:3%;
-    z-index: 999;
 }
 .carousel-indicator{
     height: 12px;
@@ -302,7 +309,7 @@ main p{
     cursor: pointer;
 }
 .carousel-indicator.active{
-    background-color: rgba(0,0,0,0.8);
+    background-color: white;
 }
 
 .carousel-btn{
