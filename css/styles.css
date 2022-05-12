@@ -214,7 +214,6 @@ a.nav-toggle{
     background-color: #F7F7F7;
     color:#5b6e80;
     margin-bottom: 2em;
-    text-align: center;
 }
 main p{
     margin-bottom:2em;
@@ -222,7 +221,8 @@ main p{
 
 .intro-text-container{
     transform: translateY(50%);
-    padding:0 8em;
+    width: min(90%, 50em);
+    margin-inline: auto;
     border-radius: 16px;
     transition: opacity 2s, transform 2s;
     opacity: 0;
@@ -452,6 +452,9 @@ main p{
         transform: translateY(-50%);
         row-gap: 0.5em;
         padding:0.3em;
+    }
+    .intro-text-container{
+        text-align: center;
     }
 
     .sidebar-icons-container .icon{
