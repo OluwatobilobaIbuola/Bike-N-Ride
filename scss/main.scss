@@ -1,13 +1,27 @@
 @import "./resets.scss";
 @import "./variables.scss";
 
+@function weight($key){
+    @return map-get($map: $font-weights, $key: $key);
+}
 
-
-body{
-    font-weight: map-get($map: $font-weights, $key: regular);
-    background-color: $body-main-color;
+.project-content{
+    font-weight: weight(regular);
+    color: $clr-text-primary;
     font-family: $ff-primary;
     font-size: 16px;
     line-height: 1.1;
-    color: $clr-text-accent
+    .container{
+        width:min(90%, 80em);
+        margin-inline:auto;
+        padding:4rem 0;
+    }
+    .heady{
+        background-color: $clr-black;
+        #{&}__navbar{
+            display: flex;
+        }
+    }
+    
 }
+
