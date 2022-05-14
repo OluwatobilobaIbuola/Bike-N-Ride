@@ -11,17 +11,24 @@
     font-family: $ff-primary;
     font-size: 16px;
     line-height: 1.1;
-    .container{
-        width:min(90%, 80em);
-        margin-inline:auto;
-        padding:4rem 0;
-    }
-    .heady{
-        background-color: $clr-black;
-        #{&}__navbar{
-            display: flex;
-        }
-    }
-    
-}
 
+}
+.container{
+    width:min(90%, 80em);
+    margin-inline:auto;
+    padding:4rem 0;
+}
+.heady{
+    color:$clr-text-primary;
+    background-color: $clr-black;
+    #{&}__navbar{
+        display: flex;
+    }
+    #{&}__logo{
+        margin-right: auto;
+        color:$clr-text-primary;
+    }
+    #{&}__search-icon{
+        width:1em;
+    }
+}
