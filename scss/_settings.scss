@@ -20,24 +20,20 @@ h3,
 p{
     margin: 0;
 }
+$padding-block : (
+    "small": 2em 0,
+    "medium": 4em 0,
+    "large": 8em 0,
+);
+@function padding($key){
+    @return map-get($map: $padding-block, $key: $key)
+};
 
 $font-weights : (
     "regular": 400,
     "medium": 500,
     "bold": 700
 );
-
-@font-face{
-    font-family: "Audrey";
-    src: url("../css/fonts/Audrey-Bold.woff") format("woff");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "Modern-Sans";
-    src: url("../dist/css/fonts/Moderne-Sans-Font.woff") format("woff");
-    font-weight: normal;
-}
 
 @function weight($key){
     @return map-get($map: $font-weights, $key: $key);
@@ -46,7 +42,6 @@ $font-weights : (
 @mixin container {
     width:min(90%, 80em);
     margin-inline:auto;
-    padding:4rem 0;
 }
 
 

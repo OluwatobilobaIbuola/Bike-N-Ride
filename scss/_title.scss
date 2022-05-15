@@ -1,4 +1,29 @@
+@import "settings";
 .title{
-    background-color: $secondary-clr;
-    color: $primary-clr;
+    height: 100vh;
+    color: $clr-white;
+    position: relative;
+    #{&}__icons-container{
+        position: absolute;
+        right: 0;
+        top:50%;
+        transform: rotateY(50%);
+        border:2px solid red;
+        background-color: $clr-white;
+        opacity:0.6;
+    }
+    #{&}__icon{
+        width:2em;
+    }
+    #{&}__main{
+        @include container;
+        padding:padding(large);
+    }
+    #{&}__text-container{
+        background-color: $clr-black;
+        border-radius: 8px;
+        opacity:0.8;
+        padding:1em;
+        width: fit-content;
+    }
 }
