@@ -1,6 +1,6 @@
 .title{
     margin-bottom: 2em;
-    background-image: url("../css/bg-images/bike1.jpg");
+    background-image: url("../bg-images/bike1.jpg");
     background-size: cover;
     #{&}__main{
         @include container;
