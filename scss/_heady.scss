@@ -1,40 +1,151 @@
 @import "settings";
 .heady{
-    position: fixed;
-    z-index: 2;
-    width:100%;
-    #{&}__logo{
-        font-size: 1.2rem;
+  position: fixed;
+  z-index: 999;
+  width:100%;
+  #{&}__logo{
+    font-size: 1.2rem;
+    &.light-theme{
+      color: $clr-black;
     }
-    background-color: $clr-black;
-    color:$clr-white;
-    #{&}__search-bar{
-        display:none;
-    }
-    #{&}__container{
-        padding: padding(small);
-        position: relative;
-        display:flex;
-        justify-content: space-between;
-        @include container;
-    }
-    #{&}__bar{
+  }
+  background-color: $clr-black;
+  color:$clr-white;
+  @include transition-ease;
+  &.light-theme{
+    background-color: $primary-clr;
+  }
+  #{&}__search-bar{
+    display:none;
+  }
+  #{&}__container{
+    padding: padding(small);
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    @include container;
+  }
+  & .bar-container{
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
+    &__burger{
+      position: absolute;
+      top: 45%;
+      width: 28px;
+      height: 3px;
+      background-color: set-text-color($clr-black);
+      @include transition-ease;
+      &::before {
+        content: '';
         position: absolute;
+        top: -8px;
+        right: 0;
+        width: 20px;
+        height: 3px;
+        background: set-text-color($clr-black);
+        @include transition-ease;
+        }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
         right:0;
-        display:none;
+        width: 20px;
+        height: 3px;
+        background: set-text-color($clr-black);
+        @include transition-ease;
+      }
+      
+      &.open {
+        transform: rotate(720deg);
+        background:  $secondary-clr;
+        &::before {
+          width:28px;
+          background-color: $secondary-clr;
+          transform: rotate(90deg) translate(8px, 0);
+        }
+    
+        &::after {
+          background-color: transparent;
+        }
+      }  
     }
-    #{&}__bar.appear{
-        display: flex;
-    }
+  }
 }
 
-.nav{
-    display:none;
-    #{&}__list-container{
-        list-style: none;
-        display:flex;
-        flex-direction: column;
-        row-gap: 2em;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.8;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $clr-black;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease;
+    &.light-theme{
+      background-color:$clr-white;
     }
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    &__list {
+      transform: translate(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0); 
+      }
+
+      &.active > a {
+        color: $secondary-clr;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease;
+      &.light-theme{
+        color:$clr-black;
+      }
+      &:hover {
+        color: $secondary-clr;
+      }
+    }
+  }
 }
+
+@for $i from 1 through 4 {
+  .nav-container:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
+  
 

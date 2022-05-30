@@ -1,0 +1,48 @@
+.contact{
+    background:url(../css/bg-images/img2.jpg);
+    background-position: 40% 10%;
+    color:$clr-white;
+    background-attachment: fixed;
+    margin-bottom: 2em;
+    padding:padding(medium);
+    .contact-container{
+        @include container;
+        .contact__form{
+            width:100%;
+            .contact__heading{
+                font-size: 2em;
+            }
+            .contact__heading span{
+                color:#206A5D;
+            }
+            .form__input, .form__textarea{
+                width:75%;
+                padding:1em;
+                outline:none;
+                border: none;
+                background:#1f1f1f;
+                margin-bottom:2em;
+                border-radius:8px;
+                color:white;
+            }
+            .form__btn{
+                font-weight: 400;
+                border-radius: 8px;
+                padding: 0.8em 2em;
+                font-size: 1rem;
+                display: block;
+                background: #206A5D;
+                transition: all 0.4s ease-in-out;
+                letter-spacing: 1px;
+                color:white;
+                margin-top: 1em;
+                border:0;
+                &:hover{
+                    transform: scale(1.04);
+                    opacity: 0.75;
+                }
+            }
+    
+        }
+    }
+}

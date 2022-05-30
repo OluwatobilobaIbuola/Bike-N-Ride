@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike N Ride</title>
+    <title>RiderBank</title>
 
     <!-- fonts -->
      
@@ -18,109 +18,147 @@
                 <div class="heady-item">
                     <a class="heady__logo" href="index.html">RiderBank</a>
                 </div>
-                <div class="heady__bar-icon heady__item--toggle">
-                    <i class="fa-solid heady__bar fa-bars appear"></i>
-                    <i class="fa-solid heady__bar fa-bars-staggered"></i>
+                <div class="bar-container bar-container--toggle">
+                    <span class="bar-container__burger"></span>
                 </div>
                 <nav class="nav hide">
-                    <ul class="nav__list-container">
-                        <li class="nav__list"><a class="nav__link"href="index.html">Main</a></li>
-                        <li class="nav__list"><a class="nav__link"href="#">Service</a></li>
-                        <li class="nav__list"><a class="nav__link"href="#">About</a></li>
-                        <li class="nav__list"><a class="nav__link"href="contact.html">Contact Us</a></li>
+                    <ul class="nav-container">
+                        <li class="nav-container__list active"><a class="nav-container__link"href="index.html">Main</a></li>
+                        <li class="nav-container__list"><a class="nav-container__link"href="#">Service</a></li>
+                        <li class="nav-container__list"><a class="nav-container__link"href="#">About</a></li>
+                        <li class="nav-container__list"><a class="nav-container__link"href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="heady__search-bar">
                     <img class="heady__search-icon" src="images/magnifying-glass.png" alt="">
                     <input type="search" aria-label="search" placeholder="search" class="heady__search-input">
                 </div>
-        
            </div>
                
         </header>
         
         <section id="title" class="title">
+            <!-- <div class="slides-container">
+               <div class="slides">
+                   <div class="slides__img-container">
+                    <img class="slide" src="./dist/css/bg-images/bike1.jpg" alt="bike-photo">
+                   </div>
+                   <div class="slides__img-container">
+                    <img class="slide" src="./dist/css/bg-images/bike2.jpg" alt="bike-photo">
+                   </div>
+                   <div class="slides__img-container">
+                    <img class="slide" src="./dist/css/bg-images/bike3.jpg" alt="bike-photo">
+                   </div>
+                   <div class="slides__img-container">
+                    <img class="slide" src="./dist/css/bg-images/bike4.jpg" alt="bike-photo">
+                   </div>
+               </div>     
+            </div> -->
+           
             <main class="title__main">
-                <div>
-                    <div class="title__text-container">
-                        <h1 class="title__heading">Lore mj doty <br> sitm amet co adipi.</h1>
-                        <p class="title__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
-                    </div>
-                     <div>
-                        <button class="title__button">Order Bike</button>
-                        <button class="title__button title__button--right">Sign Up</button>
-                    </div>
+                <div class="title__text-container">
+                    <h1 class="title__heading">Lore mj doty <br> sitm amet co adipi.</h1>
+                    <p class="title__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iusto.</p>
                 </div>
-                <aside class="title__icons-container">
-                    <div class="title__icon-wrapper">
-                        <a href=""><img class="title__icon" src="images/facebook (1).png" alt="facebook"></a> 
-                    </div>
-                    <div class="title__icon-wrapper">
-                        <a href=""><img class="title__icon" src="images/instagram (1).png" alt="instagram"></a> 
-                    </div>
-                    <div class="title__icon-wrapper">
-                        <a href=""><img class="title__icon" src="images/twitter.png" alt="twitter"></a> 
-                    </div>
-                </aside> 
+                    <div class="title__button-container">
+                    <button class="title__button">Order Bike</button>
+                    <button class="title__button title__button--right">Sign Up</button>
+                </div>
             </main>
         </section>
-
-        <!-- <article id="about" class="about">
-            
-                <main class="about__text container fade-in">
+        <article id="about" class="about">
+                <main class="about__text fader">
         
-                        <h2 class="about__heading">Welcome to the <span>RiderBank</span> official website.</h2>
+                        <h2 class="about__heading">Welcome to the <span class="about__heading--clr">RiderBank</span> official website.</h2>
                         <p class="about__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, tenetur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>
                         <p class="about__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, distinctio.</p>    
     
                 </main>
-           
+                <input value="Blog Site" class="about__button fader" type="button">
         </article>
         <section id="card" class="card" >
-                <div class="card__item-container container">
+                <div class="card__item-container">
                     <div class="card__item">
-                        <img class="icon" src="images/voltage.png" alt="">
-                        <h3> Engine Power</h3>
-                        <p>1300cm per seconds</p>
+                        <h3 class="card__text"> Engine Power</h3>
+                        <img class="card__icon" src="./dist/css/bg-images/bike4.jpg" alt="">
+                        <p class="card__paragraph">Rent: N12,500</p>
+                        <div class="card__btns">
+                            <a class="card__btn"><i class="fa-solid fa-book-open"></i>
+                                Read More
+                            </a>
+                        </div>
                     </div>
                     <div class="card__item">
-                        <img class="card__icon"  src="images/speedometer (2).png" alt="">
-                        <h3>Max Power</h3>
-                        <p>1325cm per seco</p>
+                        <h3  class="card__text">Max Power</h3>
+                        <img class="card__icon"  src="./dist/css/bg-images/bike2.jpg" alt="">
+                        <p class="card__paragraph">Rent: N13,600</p>
+                        <div class="card__btns">
+                            <a class="card__btn"><i class="fa-solid fa-book-open"></i>
+                                Read More
+                            </a>
+                        </div>
+                        </div>
+                    <div class="card__item">
+                        <h3 class="card__text">RPM Guage</h3>
+                        <img class="card__icon"  src="./dist/css/bg-images/bike1.jpg" aalt="">
+                        <p class="card__paragraph">Rent: N12,600</p>
+                        <div class="card__btns">
+                            <a class="card__btn"><i class="fa-solid fa-book-open"></i>
+                                Read More
+                            </a>
+                        </div>
                     </div>
                     <div class="card__item">
-                        <img class="card__icon"  src="images/bicycle.png" aalt="">
-                        <h3>RPM Guage</h3>
-                        <p>1300cm per seconds</p>
+                        <h3 class="card__text">Riding Range</h3>
+                        <img class="card__icon"  src="./dist/css/bg-images/bike3.jpg" alt="">
+                        <p class="card__paragraph">Rent: N14,900</p>
+                        <div class="card__btns">
+                            <a class="card__btn"><i class="fa-solid fa-book-open"></i>
+                                Read More
+                            </a>
+                        </div>
                     </div>
                     <div class="card__item">
-                        <img class="card__icon"  src="images/voltage.png" alt="">
-                        <h3>Riding Range</h3>
-                        <p>1300cm per seconds</p>
-                    </div>
-                    <div class="card__item">
-                        <img class="card__icon"  src="images/star.png" alt="">
-                        <h3>Bike rating</h3>
-                        <p>⭐⭐⭐⭐</p>
+                        <h3 class="card__text">Bike rating</h3>
+                        <img class="card__icon"  src="./dist/css/bg-images/bike4.jpg" alt="">
+                        <p class="card__paragraph">Rent: N11,600</p>
+                        <div class="card__btns">
+                            <a class="card__btn"><i class="fa-solid fa-book-open"></i>
+                                Read More  
+                            </a>
+                        </div>
                     </div> 
                 </div>
         </section>
+        <section class="contact section-observe">
+            <div class="contact-container">
+              <div class="contact__form">
+                <h1 class="contact__heading">Contact <span>Me</span></h1>
+                <form action="mailto:ibuolatobi@gmail.com" method="post"></form>
+                  <input class="form__input" placeholder="Your name" type="text" name="name" required>
+                  <input class="form__input" placeholder="Your email" type="email" name="email" required>
+                  <textarea  class="form__textarea" placeholder="Your message" name="" id="" cols="40" rows="15"></textarea>
+                  <input value="Submit" type="button" class="form__btn">
+                </form>
+              </div>
+            </div>
+        </section>
         
-        <footer id="footer" class="footer">
-            <div class="container">
-                <h2 class="footer__heading">Discover more</h2>
+        <footer id="footer" class="footer section-observe">
+            <div class="footer__item-container">
+                <h3 class="footer__heading">Discover more</h3>
                 <hr>
-                <div class="footer__info-container split">
-                    <div class="footer__info split-item">
-                        <h3 class="footer__sub-heading">News</h3>
+                <div class="footer__info-container">
+                    <div class="footer__info">
+                        <h4 class="footer__sub-heading">News</h4>
                         <ul  class="footer__list-container">
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
                         </ul>
                     </div>
-                    <div class="footer__info split-item">
-                        <h3 class="footer__sub-heading">Events</h3>
+                    <div class="footer__info">
+                        <h4 class="footer__sub-heading">Events</h4>
                         <ul class="footer__list-container">
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
@@ -128,8 +166,8 @@
                             <li class="footer__list">Lorem, ipsum.</li>
                         </ul>
                     </div>
-                    <div class="footer__info split-item">
-                        <h3 class="footer__sub-heading">All about bikes</h3>
+                    <div class="footer__info">
+                        <h4 class="footer__sub-heading">All about bikes</h4>
                         <ul class="footer__list-container">
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
@@ -138,15 +176,15 @@
                             <li class="footer__list">Lorem, ipsum.</li>
                         </ul>
                     </div>
-                    <div class="footer__info split-item">
-                        <h3 class="footer__sub-heading">More topics</h3>
+                    <div class="footer__info">
+                        <h4 class="footer__sub-heading">More topics</h4>
                         <ul class="footer__list-container">
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
                         </ul> 
                     </div>
-                    <div class="footer__info split-item">
-                        <h3 class="footer__sub-heading">Lorem</h3>
+                    <div class="footer__info">
+                        <h4 class="footer__sub-heading">Lorem</h4>
                         <ul class="footer__list-container">
                             <li class="footer__list">Lorem, ipsum.</li>
                             <li class="footer__list">Lorem, ipsum.</li>
@@ -155,20 +193,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="social">
-                    <h3 class="social__heading">Stay connected</h3>
-                    <hr>
-                    <p class="social__paragraph">Follow us and use the following social media platforms to get in contact with us and to share your passion for biking</p>
-                    <div class="social__icon-container">
-                        <i class=" social__icon fa-brands fa-facebook"></i>
-                        <i class="social__icon fa-brands fa-instagram"></i>
-                        <i class=" social__icon fa-brands fa-twitter"></i>
-                    </div>
+                <h3 class="social__heading">Stay connected</h3>
+                <hr>
+                <p class="social__paragraph">Follow us and use the following social media platforms to get in contact with us and to share your passion for biking</p>
+                <div class="social__icon-container">
+                    <i class=" social__icon fa-brands fa-facebook"></i>
+                    <i class="social__icon fa-brands fa-instagram"></i>
+                    <i class=" social__icon fa-brands fa-twitter"></i>
                 </div>
                 <hr>
                 <p class="copyright"></p>
             </div>
-        </footer> -->
+        </footer>
 
   <script src="index.js"></script>  
  

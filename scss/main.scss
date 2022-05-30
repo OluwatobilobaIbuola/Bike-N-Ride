@@ -1,5 +1,11 @@
+@import "settings";
 @import "heady";
 @import "title";
+@import "article";
+@import "card";
+@import "footer";
+@import "contact";
+@import "responsiveness";
 
 @font-face{
     font-family: "Audrey";
@@ -9,12 +15,12 @@
 
 @font-face {
     font-family: "Modern-Sans";
-    src: url("../dist/css/fonts/Moderne-Sans-Font.woff") format("woff");
+    src: url("../css/fonts/Moderne-Sans-Font.woff") format("woff");
     font-weight: normal;
 }
 body{
     font-weight: weight(regular);
-    font-family: $ff-primary;
+    font-family: $ff-accent;
     font-size: 16px;
     line-height: 1.1;
     color:$clr-accent;
@@ -23,8 +29,18 @@ a{
     text-decoration: none;
     color:$clr-white;
 }
-a:hover{
-    color:$secondary-clr;
+h1,
+h2,
+h3,
+p{
+    margin-bottom: 0.5em;
+}
+hr{
+    border-top: 1px solid $clr-accent;
+    border-bottom-style:none;
+    border-left-style: none;
+    border-right-style: none;
+    margin:2rem 0;
 }
 
 
