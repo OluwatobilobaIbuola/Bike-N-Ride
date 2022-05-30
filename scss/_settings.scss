@@ -1,0 +1,71 @@
+$secondary-clr: #206A5D;
+$clr-accent:#5b6e80;
+$clr-white:#FFFFFF;
+$primary-clr:#F7F7F7;
+$clr-black:#000000;
+
+$ff-accent: "Modern-Sans";
+$ff-primary: "Audrey";
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    border:none;
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+$padding-block : (
+    "small": 2em 0,
+    "medium": 4em 0,
+    "large": 8em 0,
+);
+@function padding($key){
+    @return map-get($map: $padding-block, $key: $key)
+};
+
+$font-weights : (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function weight($key){
+    @return map-get($map: $font-weights, $key: $key);
+}
+
+@mixin container{
+    width:min(90%, 80rem);
+    margin-inline:auto;
+}
+@mixin transition-ease {
+    transition: all 0.4s ease-in-out;
+}
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

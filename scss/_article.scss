@@ -1,0 +1,50 @@
+.about{
+    padding:padding(large);
+    background-color: $primary-clr;
+    margin-bottom: 2em;
+    text-align: center;
+    overflow-y: hidden;
+    #{&}__text{
+        @include container;
+        width: min(90%, 50em);
+        margin-inline: auto;   
+        transition: opacity 2s, transform 1s;
+        opacity: 0;
+        transform: translateY(100%);
+        &.fade-in{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    #{&}__heading{
+        font-family: $ff-primary;
+        color:$clr-black;
+        font-size: 2em;
+        &--clr{
+            color:$secondary-clr;
+        }
+    }
+    #{&}__button{
+        margin-top:1em;
+        border-radius: 6px;
+        padding: 0.8em 1.2em;
+        font-size: 1rem;
+        background: $secondary-clr;
+        border:2px solid $secondary-clr;
+        color: $clr-white;
+        transition: 1s;
+        letter-spacing: 1px;
+        width: 150px;
+        transform: translate(-200%);
+        @include transition-ease;
+        transition-delay: 1s;
+        opacity: 0;
+        &.fade-in{
+            transform: translate(0);
+            opacity: 1;
+        }
+        &:hover{
+            opacity:0.7;
+        }
+    }
+}
