@@ -78,7 +78,6 @@ const fadersObserver = new IntersectionObserver((entries) => {
       }
     })
 })
-
 fadersEl.forEach(fade => {
   fadersObserver.observe(fade)
 }) 
